@@ -1,0 +1,16 @@
+runtime: java
+env: flex
+service: ml-demo
+
+runtime_config:  # Optional
+  jdk: openjdk8
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: appengine
