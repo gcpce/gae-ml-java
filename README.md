@@ -30,15 +30,19 @@ have access to them (which it normally does)
 
 ### Compiling & Deploying
 to compile, type:
+
 ```mvn clean package```
 
 if you get errors (most likely due to environment variables not being set), use the following:
+
 ```mvn clean package -DskipTests```
 
 to deploy to app engine:
+
 ```mvn appengine:deploy -DskipTests```
 
 if you don't want to skip tests, then add the required environment variables to the mvn command:
+
 ```mvn clean package -DPROJECT_ID=<projet_id> -DGOOGLE_CREDENTIALS=<credential json file>```
 
 in the above line, the value for the credentials should be the actual contents of the json file, and not the filename of the file
