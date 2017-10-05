@@ -1,7 +1,7 @@
 # gae-ml-java
 spring boot apps for App Engine to test out various Google Cloud ML APIs (e.g. Vision)
 
-###Prep
+### Prep
 Enable the storage, app engine, and vision APIs from the API dashboard
 
 Download the `json` priviate key file for the service account that will be used for running this app on App Engine
@@ -14,7 +14,7 @@ to run locally, add the following environment variables in your execution shell 
  
 Create a bucket in your storage account and add a few images to it
 
-###Usage
+### Usage
 To run the vision test, if running locally or on app engine, put in the following query:
 
 ```http://localhost:8080/vision?bucket=<bucket_name>&file=<file_name>```
@@ -28,7 +28,7 @@ an image file you've uploaded in that bucket
 NOTE: you don't need to make the objects in the storage bucket public, but your service account should 
 have access to them (which it normally does)
 
-###Compiling & Deploying
+### Compiling & Deploying
 to compile, type:
 ```mvn clean package```
 
